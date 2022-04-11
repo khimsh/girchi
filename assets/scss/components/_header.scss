@@ -11,6 +11,10 @@
     align-items: center;
     gap: 1rem;
     border-bottom: 2px solid #327f37;
+
+    @media screen and (max-width: 768px) {
+      padding-block: 10px;
+    }
   }
 
   &__logo {
@@ -28,6 +32,18 @@
       font-weight: 700;
       color: var(--clr-brand);
       text-transform: uppercase;
+      font-feature-settings: 'case' on;
+
+      @media screen and (max-width: 768px) {
+        --fz: 18px;
+      }
+    }
+
+    img {
+      @media screen and (max-width: 768px) {
+        width: 24px;
+        height: auto;
+      }
     }
   }
 
@@ -35,6 +51,18 @@
     display: flex;
     align-items: center;
     gap: 5px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    &.mobile-only {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: flex;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &__cta {
@@ -69,6 +97,7 @@
   }
 
   &__bottom {
+    position: relative;
     padding-block: 15px;
     display: flex;
     justify-content: space-between;
@@ -78,6 +107,26 @@
 }
 
 .nav {
+  @media screen and (max-width: 1360px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: hsl(var(--clr-neutral-100));
+    z-index: 100;
+
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 200ms ease-in-out;
+
+    &.active {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
   &__list {
     margin: 0;
     padding: 0;
@@ -85,6 +134,14 @@
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @media screen and (max-width: 1360px) {
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      gap: 10px;
+    }
   }
 
   &__link {
@@ -134,6 +191,11 @@
     font-feature-settings: 'case' on;
     color: #ffffff;
     text-decoration: none;
+
+    @media screen and (max-width: 1360px) {
+      align-self: flex-start;
+      width: max-content;
+    }
   }
 }
 
@@ -147,6 +209,15 @@
   z-index: 100;
   box-shadow: 0 2px 4px hsl(0 0% 0% / 0.15);
   border-radius: 0.1em;
+
+  @media screen and (max-width: 1360px) {
+    position: relative !important;
+    transform: scaleY(1) !important;
+    opacity: 1 !important;
+    box-shadow: unset;
+    padding: 0;
+    padding-inline-start: 1rem;
+  }
 
   &__link {
     display: block;
@@ -201,5 +272,36 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
+  }
+}
+
+.open-nav {
+  display: none;
+  margin-left: auto;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: var(--clr-brand);
+  cursor: pointer;
+
+  @media screen and (max-width: 1360px) {
+    display: block;
+  }
+}
+
+.close-nav {
+  display: none;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: var(--clr-brand);
+  cursor: pointer;
+
+  @media screen and (max-width: 1360px) {
+    display: block;
   }
 }

@@ -1,20 +1,8 @@
 // Dropdown
-
 function dropdown() {
   if (!document.querySelector('[data-dropdown]')) return;
 
   const dropdowns = document.querySelectorAll('[data-dropdown]');
-
-  // window.addEventListener('click', (e) => {
-  //   const dropdownClicked = e.target.closest('[data-dropdown]');
-  //   console.log(dropdownClicked.classList.contains('dropdown'));
-
-  //   console.log(e.target);
-
-  //   if (dropdownClicked && dropdownClicked.classList.contains('dropdown')) return;
-
-  //   dropdowns.forEach((dropdown) => closeDropdown(dropdown));
-  // });
 
   dropdowns.forEach((dropdown) => {
     dropdown.addEventListener('click', function () {
@@ -35,4 +23,17 @@ function dropdown() {
   }
 }
 
+// Navigation
+function toggleNavigation() {
+  if (!document.querySelector('.nav') || !document.querySelector('.open-nav')) return;
+
+  const nav = document.querySelector('.nav');
+  const navToggle = document.querySelector('.open-nav');
+
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+}
+
+toggleNavigation();
 dropdown();
