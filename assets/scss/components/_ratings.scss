@@ -29,6 +29,7 @@
   }
 
   &__img {
+    margin-inline: auto;
     width: 64px;
     height: 64px;
     border-radius: 40px;
@@ -54,6 +55,7 @@
     font-size: 20px;
     line-height: 24px;
     display: flex;
+    justify-content: center;
     align-items: center;
     font-feature-settings: 'case' on;
     color: #ffa823;
@@ -78,6 +80,14 @@
       &:last-child {
         padding-inline-end: 24px;
       }
+
+      &:nth-child(2) {
+        padding-inline: 30px;
+
+        @media screen and (max-width: 768px) {
+          padding-inline: 10px;
+        }
+      }
     }
   }
 
@@ -101,6 +111,7 @@
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;
+      text-align: center;
       font-feature-settings: 'case' on;
       color: #32394d;
 
@@ -112,6 +123,10 @@
       }
       &:nth-child(2) {
         padding-inline: 30px;
+
+        @media screen and (max-width: 768px) {
+          padding-inline: 10px;
+        }
       }
     }
   }

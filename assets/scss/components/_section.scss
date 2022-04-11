@@ -22,6 +22,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
@@ -38,6 +42,10 @@
       font-feature-settings: 'case' on;
       color: #32394d;
       text-transform: uppercase;
+
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
     }
   }
 
