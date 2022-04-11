@@ -4,6 +4,18 @@
   background: #f8f8f8;
   border-radius: 11px;
 
+  &.chart,
+  &.ratings {
+    padding-block-end: 10px;
+  }
+
+  &.ratings {
+    padding-inline: 0 !important;
+    .section__heading {
+      padding-inline: 27px;
+    }
+  }
+
   &__heading {
     margin-bottom: 26px;
     display: flex;

@@ -2,6 +2,7 @@
   position: relative;
   width: max-content;
   overflow: clip;
+  width: 100%;
 
   &::before,
   &::after {
@@ -23,6 +24,7 @@
   }
 
   table {
+    width: 100%;
     border-collapse: collapse;
   }
 
@@ -88,9 +90,7 @@
       }
 
       &:not(:last-child) {
-        td {
-          border-bottom: 1px solid hsl(224 21% 25% / 0.32);
-        }
+        border-bottom: 1px solid hsl(224 21% 25% / 0.32);
       }
     }
 

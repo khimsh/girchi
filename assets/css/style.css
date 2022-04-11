@@ -473,6 +473,15 @@ p {
   background: #f8f8f8;
   border-radius: 11px;
 }
+.section.chart, .section.ratings {
+  padding-block-end: 10px;
+}
+.section.ratings {
+  padding-inline: 0 !important;
+}
+.section.ratings .section__heading {
+  padding-inline: 27px;
+}
 .section__heading {
   margin-bottom: 26px;
   display: flex;
@@ -667,6 +676,7 @@ p {
   position: relative;
   width: max-content;
   overflow: clip;
+  width: 100%;
 }
 .ratings-table::before, .ratings-table::after {
   content: "";
@@ -684,6 +694,7 @@ p {
   right: -20px;
 }
 .ratings-table table {
+  width: 100%;
   border-collapse: collapse;
 }
 .ratings-table__img {
@@ -736,7 +747,7 @@ p {
 .ratings-table tbody tr:first-child td {
   padding-top: 24px;
 }
-.ratings-table tbody tr:not(:last-child) td {
+.ratings-table tbody tr:not(:last-child) {
   border-bottom: 1px solid hsla(224deg, 21%, 25%, 0.32);
 }
 .ratings-table tbody td {
