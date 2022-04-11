@@ -5,6 +5,10 @@
   background: #ffffff;
   border-radius: 20px;
 
+  @media screen and (max-width: 1360px) {
+    flex-direction: column;
+  }
+
   &__image {
     flex: 0 0 288px;
     box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.2);

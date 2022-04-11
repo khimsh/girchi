@@ -49,13 +49,22 @@
     color: hsl(var(--clr-neutral-100));
     text-decoration: none;
     border-radius: 10px;
+    transition: background-color 150ms ease-in-out;
 
     &--brand {
       background-color: var(--clr-brand);
+
+      &:hover {
+        background-color: var(--clr-brand-hover);
+      }
     }
 
     &--accent {
       background-color: var(--clr-accent);
+
+      &:hover {
+        background-color: var(--clr-accent-hover);
+      }
     }
   }
 
