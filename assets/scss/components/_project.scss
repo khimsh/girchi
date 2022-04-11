@@ -87,7 +87,6 @@
   padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 
   background: #fdfdfd;
   border-radius: 8px;
@@ -140,11 +139,10 @@
   &__desc {
     font-family: var(--ff-main);
     font-size: 12px;
-    font-weight: 400;
     color: #32394d;
-    line-height: 144.2%;
     letter-spacing: -0.01em;
     text-transform: uppercase;
+    font-feature-settings: 'case' on;
   }
 }
 

@@ -181,5 +181,16 @@
     border: none;
     cursor: pointer;
     color: #32394d;
+
+    svg {
+      display: block;
+      width: 24px;
+      height: 25px;
+      fill: none;
+      stroke: #32394d;
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
   }
 }

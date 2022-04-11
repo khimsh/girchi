@@ -93,6 +93,23 @@
     align-items: center;
     gap: 10px;
 
+    &--mail {
+      svg {
+        width: 38px;
+        height: 28px;
+        fill: hsl(224 21% 25% / 0.9);
+      }
+    }
+
+    &--fb {
+    }
+
+    &--tw {
+    }
+
+    &--yt {
+    }
+
     span {
       font-family: var(--ff-main);
       font-style: normal;

@@ -313,6 +313,16 @@ p {
   cursor: pointer;
   color: #32394d;
 }
+.search__btn svg {
+  display: block;
+  width: 24px;
+  height: 25px;
+  fill: none;
+  stroke: #32394d;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 .project-card {
   padding: 16px 18px;
@@ -390,7 +400,6 @@ p {
   padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   background: #fdfdfd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(50, 57, 77, 0.15);
@@ -415,11 +424,10 @@ p {
 .stat-project__desc {
   font-family: var(--ff-main);
   font-size: 12px;
-  font-weight: 400;
   color: #32394d;
-  line-height: 144.2%;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  font-feature-settings: "case" on;
 }
 
 .rating {
@@ -836,6 +844,11 @@ p {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.contact-footer__link--mail svg {
+  width: 38px;
+  height: 28px;
+  fill: hsla(224deg, 21%, 25%, 0.9);
 }
 .contact-footer__link span {
   font-family: var(--ff-main);
