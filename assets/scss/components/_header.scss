@@ -243,11 +243,11 @@
     font-size: 14px;
     font-weight: 500;
     color: #292a30;
-    border: 1px solid #32394d;
+    border: 1px solid hsl(224 21% 25% / 0.7);
     border-radius: 10px;
 
     &::placeholder {
-      color: #32394d;
+      color: hsl(224 21% 25% / 0.7);
     }
   }
 
@@ -260,14 +260,14 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #32394d;
+    color: hsl(224 21% 25% / 0.7);
 
     svg {
       display: block;
       width: 24px;
       height: 25px;
       fill: none;
-      stroke: #32394d;
+      stroke: hsl(224 21% 25% / 0.7);
       stroke-width: 2px;
       stroke-linecap: round;
       stroke-linejoin: round;

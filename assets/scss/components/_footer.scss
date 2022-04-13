@@ -93,6 +93,11 @@
     color: #32394d;
     opacity: 0.9;
     text-decoration: none;
+    transition: color 150ms ease-in-out;
+
+    &:hover {
+      color: var(--clr-brand);
+    }
   }
 }
 
@@ -117,20 +122,78 @@
         }
       }
 
+      &:hover {
+        svg {
+          fill: var(--clr-brand);
+        }
+      }
+
       svg {
         width: 38px;
         height: 28px;
         fill: hsl(224 21% 25% / 0.9);
+        transition: fill 150ms ease-in-out;
       }
     }
 
     &--fb {
+      &:hover {
+        svg {
+          stroke: var(--clr-brand);
+        }
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: none;
+        stroke: #32394d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5;
+        opacity: 0.9;
+        transition: stroke 150ms ease-in-out;
+      }
     }
 
     &--tw {
+      &:hover {
+        svg {
+          stroke: var(--clr-brand);
+        }
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: none;
+        stroke: #32394d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5;
+        opacity: 0.9;
+        transition: stroke 150ms ease-in-out;
+      }
     }
 
     &--yt {
+      &:hover {
+        svg {
+          stroke: var(--clr-brand);
+        }
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: none;
+        stroke: #32394d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5;
+        opacity: 0.9;
+        transition: stroke 150ms ease-in-out;
+      }
     }
 
     span {
