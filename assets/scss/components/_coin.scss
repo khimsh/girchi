@@ -5,13 +5,13 @@
 }
 
 .pie {
-  // --p: 20;
+  --p: 70;
   --b: 22px;
-  --c: darkred;
+  --c: #2fa837;
   --w: 174px;
 
   width: var(--w);
-  aspect-ratio: 1;
+  height: var(--w);
   position: relative;
   display: grid;
   margin-inline: auto;
@@ -20,7 +20,7 @@
   &__bg {
     position: absolute;
     width: var(--w);
-    aspect-ratio: 1;
+    height: var(--w);
     border: 22px solid #ffa823;
     border-radius: 100%;
   }
