@@ -35,5 +35,48 @@ function toggleNavigation() {
   });
 }
 
+// Popup
+function popup() {
+  if (!document.querySelector('.popup')) return;
+
+  const petitionPopup = document.querySelector('[data-petition]');
+  const petitionPopupClose = petitionPopup.querySelector('.popup__close');
+  const petitionBackdrop = petitionPopup.querySelector('.popup__backdrop');
+  const petitionSuccessPopup = document.querySelector('[data-petition-success]');
+  const successBackdrop = petitionSuccessPopup.querySelector('.popup__backdrop');
+  const openPopupBtns = document.querySelectorAll('[data-open-popup]');
+  const petitionForm = document.querySelector('.petition-form');
+
+  // Open Petition popup when button is clicked
+  openPopupBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      petitionPopup.classList.add('active');
+      console.log('clicked');
+    });
+  });
+
+  // Close Petition popup
+  petitionPopupClose.addEventListener('click', () => {
+    petitionPopup.classList.remove('active');
+  });
+
+  petitionBackdrop.addEventListener('click', () => {
+    petitionPopup.classList.remove('active');
+  });
+
+  successBackdrop.addEventListener('click', () => {
+    petitionSuccessPopup.classList.remove('active');
+  });
+
+  // Show success
+  petitionForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    petitionSuccessPopup.classList.add('active');
+  });
+}
+
+popup();
+
 toggleNavigation();
+
 dropdown();

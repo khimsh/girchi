@@ -1,4 +1,6 @@
 .btn {
+  display: grid;
+  place-content: center;
   height: 46px;
 
   font-family: var(--ff-main);
@@ -6,6 +8,7 @@
   font-size: 14px;
   line-height: 14px;
   font-feature-settings: 'case' on;
+  text-decoration: none;
 
   background-color: transparent;
   border: none;

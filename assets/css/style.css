@@ -120,6 +120,7 @@ input[type=search]::-webkit-search-results-decoration {
   --clr-brand-hover: #278b2d;
   --clr-accent: #ffa823;
   --clr-accent-hover: #e6961f;
+  --clr-blue: 224 21% 25%;
   --clr-neutral-100: 0 0% 100%;
   --clr-neutral-800: #33353c;
   --clr-neutral-900: 0 0% 0%;
@@ -1468,13 +1469,45 @@ p {
   color: #2fa837;
 }
 
+.form-input {
+  position: relative;
+}
+.form-input label {
+  position: absolute;
+  top: -7px;
+  left: 19px;
+  padding-inline: 4px;
+  background-color: #f8f8f8;
+  font-family: var(--ff-main);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 144.2%;
+  letter-spacing: 0.01em;
+  font-feature-settings: "case" on;
+  color: #32394d;
+}
+.form-input input {
+  height: 48px;
+  width: 100%;
+  padding-inline: 10px;
+  font-family: var(--ff-main);
+  font-size: 16px;
+  color: #32394d;
+  background-color: #f8f8f8;
+  border: 1px solid #32394d;
+  border-radius: 9px;
+}
+
 .btn {
+  display: grid;
+  place-content: center;
   height: 46px;
   font-family: var(--ff-main);
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   font-feature-settings: "case" on;
+  text-decoration: none;
   background-color: transparent;
   border: none;
   border-radius: 4px;
@@ -1495,6 +1528,94 @@ p {
 }
 .btn--outline:hover {
   border-color: hsl(224deg, 21%, 25%);
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  display: none;
+}
+.popup.active {
+  display: grid;
+}
+.popup[data-petition] .popup__content {
+  max-width: 695px;
+  padding-inline: 82px;
+}
+.popup[data-petition-success] .popup__content {
+  background-color: hsl(var(--clr-neutral-100));
+  max-width: 395px;
+  padding-inline: 42px;
+  border-radius: 8px;
+}
+.popup[data-petition-success] .popup__heading p {
+  font-size: 13px;
+}
+.popup[data-petition-success] figure {
+  display: flex;
+  justify-content: center;
+}
+.popup__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(var(--clr-neutral-900)/0.34);
+}
+.popup__content {
+  position: relative;
+  width: 95vw;
+  background: #f8f8f8;
+  border-radius: 6px;
+  padding-block: 24px 38px;
+  font-family: var(--ff-main);
+}
+.popup__close {
+  position: absolute;
+  top: 26px;
+  right: 34px;
+  width: 26px;
+  height: 26px;
+  display: block;
+  background-color: transparent;
+  border: 2px solid hsl(var(--clr-blue));
+  border-radius: 8px;
+  cursor: pointer;
+}
+.popup__close i {
+  display: block;
+}
+.popup__heading {
+  margin-bottom: 34px;
+  text-align: center;
+}
+.popup__heading h2 {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: -0.005em;
+  font-feature-settings: "case" on;
+  color: hsl(var(--clr-blue));
+}
+.popup__heading p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150.2%;
+  letter-spacing: -0.01em;
+  color: hsl(var(--clr-blue));
+}
+
+.petition-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 34px;
+}
+.petition-form button {
+  grid-column: span 2;
+  justify-self: center;
+  width: 320px;
 }
 
 .hero {
