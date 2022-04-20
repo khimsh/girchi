@@ -30,3 +30,21 @@
     border-radius: 9px;
   }
 }
+
+.form-checkbox {
+  label {
+    font-family: var(--ff-main);
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: -0.01em;
+    color: #32394d;
+  }
+
+  input[type='checkbox'] {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #32394d;
+    border-radius: 4px;
+    transform: translateY(4px);
+  }
+}

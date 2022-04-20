@@ -122,6 +122,7 @@ input[type=search]::-webkit-search-results-decoration {
   --clr-accent-hover: #e6961f;
   --clr-red: #f10000;
   --clr-blue: 224 21% 25%;
+  --clr-blue-hover: hsl(224 30% 15%);
   --clr-neutral-100: 0 0% 100%;
   --clr-neutral-800: #33353c;
   --clr-neutral-900: 0 0% 0%;
@@ -1511,6 +1512,21 @@ p {
   border-radius: 9px;
 }
 
+.form-checkbox label {
+  font-family: var(--ff-main);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  color: #32394d;
+}
+.form-checkbox input[type=checkbox] {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #32394d;
+  border-radius: 4px;
+  transform: translateY(4px);
+}
+
 .btn {
   display: grid;
   place-content: center;
@@ -1534,6 +1550,14 @@ p {
 .btn--block:hover {
   background-color: var(--clr-brand-hover);
 }
+.btn--blue {
+  color: #fff;
+  background-color: hsl(var(--clr-blue));
+  transition: all 150ms ease-in-out;
+}
+.btn--blue:hover {
+  background-color: var(--clr-blue-hover);
+}
 .btn--outline {
   color: #32394d;
   border: 1px solid hsla(224deg, 21%, 25%, 0.6);
@@ -1555,11 +1579,11 @@ p {
 }
 .popup[data-petition] .popup__content {
   max-width: 695px;
-  padding-inline: 82px;
+  padding-inline: 74px;
 }
 .popup[data-petition-success] .popup__content {
   background-color: hsl(var(--clr-neutral-100));
-  max-width: 395px;
+  max-width: 505px;
   padding-inline: 42px;
   border-radius: 8px;
 }
@@ -1617,6 +1641,24 @@ p {
   line-height: 150.2%;
   letter-spacing: -0.01em;
   color: hsl(var(--clr-blue));
+}
+.popup__ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.popup__ctas span {
+  font-family: var(--ff-main);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  font-feature-settings: "case" on;
+  color: #32394d;
+}
+.popup__ctas a,
+.popup__ctas button {
+  width: 194px;
 }
 
 .petition-form {

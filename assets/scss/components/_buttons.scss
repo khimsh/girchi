@@ -25,6 +25,16 @@
     }
   }
 
+  &--blue {
+    color: #fff;
+    background-color: hsl(var(--clr-blue));
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-blue-hover);
+    }
+  }
+
   &--outline {
     color: #32394d;
     border: 1px solid hsl(224 21% 25% / 0.6);

@@ -471,8 +471,13 @@
 
         <form action="#" class="petition-form">
           <div class="form-input">
-            <label for="name">სახელი და გვარი</label>
+            <label for="name">სახელი</label>
             <input type="text" name="name" id="name" />
+          </div>
+
+          <div class="form-input">
+            <label for="lastname">გვარი</label>
+            <input type="text" name="lastname" id="lastname" />
           </div>
 
           <div class="form-input">
@@ -490,6 +495,14 @@
             <input type="email" name="email" id="email" />
           </div>
 
+          <div>
+            <p>გსურს მიიღო შეტყობინება სიახლეებზე?</p>
+            <div class="form-checkbox">
+              <label for="subscribe">გამოიწერე სიახლეები</label>
+              <input type="checkbox" name="subscribe" id="subscribe" />
+            </div>
+          </div>
+
           <button class="btn btn--block" type="submit">ხელისმოწერა</button>
         </form>
       </div>
@@ -499,13 +512,15 @@
       <div class="popup__backdrop"></div>
       <div class="popup__content">
         <header class="popup__heading">
-          <h2>ხელმოწერილია</h2>
-          <p>შენ წარმატებით შეავსე პეტიციის ფორმა და შეიტანე შენი წვლილი პროექტის განვითარებაში</p>
+          <h2>ხელმოწერა მიღებულია</h2>
+          <p>მადლობა პროექტის მხარდაჭერისთვის. ახლა შეგიძლია სხვა პროექტებსაც გაეცნო, ან შენს მიერ ხელმოწერილი პროექტი დაააფინანსო.</p>
         </header>
 
-        <figure>
-          <img src="assets/images/success.png" alt="" />
-        </figure>
+        <div class="popup__ctas">
+          <a href="projects.html" class="btn btn--outline">პროექტები</a>
+          <span>ან</span>
+          <a href="projects.html" class="btn btn--blue">პროექტები</a>
+        </div>
       </div>
     </div>
   </body>
