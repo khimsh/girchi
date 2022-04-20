@@ -14,13 +14,19 @@ function dropdown() {
       }
     });
   });
+}
 
-  function openDropdown(dropdown) {
-    dropdown.classList.add('active');
-  }
-  function closeDropdown(dropdown) {
-    dropdown.classList.remove('active');
-  }
+function openDropdown(dropdown) {
+  const icon = dropdown.querySelector('.fa-solid');
+  dropdown.classList.add('active');
+  icon.classList.add('fa-angle-up');
+  icon.classList.remove('fa-angle-down');
+}
+function closeDropdown(dropdown) {
+  const icon = dropdown.querySelector('.fa-solid');
+  dropdown.classList.remove('active');
+  icon.classList.add('fa-angle-down');
+  icon.classList.remove('fa-angle-up');
 }
 
 // Navigation
@@ -76,7 +82,5 @@ function popup() {
 }
 
 popup();
-
 toggleNavigation();
-
 dropdown();

@@ -3,20 +3,23 @@
   top: 100%;
   opacity: 0;
   transform: scaleY(0);
+  max-height: 0;
   transform-origin: top;
   overflow: clip;
-  transition: all 150ms ease-in-out;
+  transition: all 200ms ease-in-out;
   z-index: 100;
 }
 
 [data-dropdown] {
   position: relative;
 
-  &:hover,
+  // &:hover,
+  // &:focus-within,
   &.active {
     [data-dropdown-content] {
       opacity: 1;
       transform: scaleY(1);
+      max-height: 1000px;
     }
   }
 }

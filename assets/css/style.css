@@ -141,7 +141,7 @@ body {
 }
 
 .container {
-  width: min(100% - 2rem, 1296px);
+  width: min(100% - 2rem, 1400px);
   margin-inline: auto;
 }
 
@@ -312,9 +312,13 @@ p {
   border: none;
   cursor: pointer;
 }
+.nav__btn span {
+  pointer-events: none;
+}
 .nav__btn i {
   color: #32394d;
   font-size: 10px;
+  pointer-events: none;
 }
 .nav__btn-block {
   height: 40px;
@@ -352,8 +356,6 @@ p {
 @media screen and (max-width: 1360px) {
   .dropdown-nav {
     position: relative !important;
-    transform: scaleY(1) !important;
-    opacity: 1 !important;
     box-shadow: unset;
     padding: 0;
     padding-inline-start: 1rem;
@@ -1330,18 +1332,20 @@ p {
   top: 100%;
   opacity: 0;
   transform: scaleY(0);
+  max-height: 0;
   transform-origin: top;
   overflow: clip;
-  transition: all 150ms ease-in-out;
+  transition: all 200ms ease-in-out;
   z-index: 100;
 }
 
 [data-dropdown] {
   position: relative;
 }
-[data-dropdown]:hover [data-dropdown-content], [data-dropdown].active [data-dropdown-content] {
+[data-dropdown].active [data-dropdown-content] {
   opacity: 1;
   transform: scaleY(1);
+  max-height: 1000px;
 }
 
 @property --p {
