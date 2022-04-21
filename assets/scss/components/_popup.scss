@@ -2,32 +2,28 @@
   position: fixed;
   inset: 0;
 
-  display: grid;
-  place-content: center;
-
   display: none;
+  place-content: center;
 
   &.active {
     display: grid;
   }
 
   &[data-petition] {
-    .popup__content {
-      max-width: 695px;
-      padding-inline: 74px;
+    --popup-bg: #f8f8f8;
+    --popup-max-w: 695px;
+    --popup-padding-inline: 74px;
 
-      @media (max-width: 780px) {
-        padding-inline: 20px;
-      }
+    @media (max-width: 780px) {
+      --popup-padding-inline: 20px;
     }
   }
+
   &[data-petition-success] {
-    .popup__content {
-      background-color: hsl(var(--clr-neutral-100));
-      max-width: 505px;
-      padding-inline: 42px;
-      border-radius: 8px;
-    }
+    --popup-bg: hsl(var(--clr-neutral-100));
+    --popup-max-w: 505px;
+    --popup-padding-inline: 42px;
+    --pupup-border-radius: 8px;
 
     .popup__heading {
       p {
@@ -50,19 +46,22 @@
   &__content {
     position: relative;
     width: 95vw;
-    background: #f8f8f8;
-    border-radius: 6px;
+    max-width: var(--popup-max-w);
+    background-color: var(--popup-bg);
+    border-radius: var(--pupup-border-radius, 6px);
     padding-block: 24px 38px;
+    padding-inline: var(--popup-padding-inline, 20px);
 
     font-family: var(--ff-main);
   }
 
   &__close {
+    --size: 26px;
     position: absolute;
     top: 26px;
     right: 34px;
-    width: 26px;
-    height: 26px;
+    width: var(--size);
+    height: var(--size);
 
     display: block;
 
@@ -113,7 +112,7 @@
       font-size: 14px;
       line-height: 14px;
       font-feature-settings: 'case' on;
-      color: #32394d;
+      color: hsl(var(--clr-blue));
     }
 
     a,

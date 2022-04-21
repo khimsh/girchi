@@ -1574,27 +1574,27 @@ p {
 .popup {
   position: fixed;
   inset: 0;
-  display: grid;
-  place-content: center;
   display: none;
+  place-content: center;
 }
 .popup.active {
   display: grid;
 }
-.popup[data-petition] .popup__content {
-  max-width: 695px;
-  padding-inline: 74px;
+.popup[data-petition] {
+  --popup-bg: #f8f8f8;
+  --popup-max-w: 695px;
+  --popup-padding-inline: 74px;
 }
 @media (max-width: 780px) {
-  .popup[data-petition] .popup__content {
-    padding-inline: 20px;
+  .popup[data-petition] {
+    --popup-padding-inline: 20px;
   }
 }
-.popup[data-petition-success] .popup__content {
-  background-color: hsl(var(--clr-neutral-100));
-  max-width: 505px;
-  padding-inline: 42px;
-  border-radius: 8px;
+.popup[data-petition-success] {
+  --popup-bg: hsl(var(--clr-neutral-100));
+  --popup-max-w: 505px;
+  --popup-padding-inline: 42px;
+  --pupup-border-radius: 8px;
 }
 .popup[data-petition-success] .popup__heading p {
   font-size: 13px;
@@ -1611,17 +1611,20 @@ p {
 .popup__content {
   position: relative;
   width: 95vw;
-  background: #f8f8f8;
-  border-radius: 6px;
+  max-width: var(--popup-max-w);
+  background-color: var(--popup-bg);
+  border-radius: var(--pupup-border-radius, 6px);
   padding-block: 24px 38px;
+  padding-inline: var(--popup-padding-inline, 20px);
   font-family: var(--ff-main);
 }
 .popup__close {
+  --size: 26px;
   position: absolute;
   top: 26px;
   right: 34px;
-  width: 26px;
-  height: 26px;
+  width: var(--size);
+  height: var(--size);
   display: block;
   background-color: transparent;
   border: 2px solid hsl(var(--clr-blue));
@@ -1663,7 +1666,7 @@ p {
   font-size: 14px;
   line-height: 14px;
   font-feature-settings: "case" on;
-  color: #32394d;
+  color: hsl(var(--clr-blue));
 }
 .popup__ctas a,
 .popup__ctas button {
