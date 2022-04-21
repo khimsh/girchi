@@ -1633,6 +1633,7 @@ p {
 }
 .popup__close i {
   display: block;
+  pointer-events: none;
 }
 .popup__heading {
   margin-bottom: 34px;

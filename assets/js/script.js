@@ -46,7 +46,6 @@ function popup() {
   if (!document.querySelector('.popup')) return;
 
   const petitionPopup = document.querySelector('[data-petition]');
-  const petitionPopupClose = petitionPopup.querySelector('.popup__close');
   const petitionBackdrop = petitionPopup.querySelector('.popup__backdrop');
   const petitionSuccessPopup = document.querySelector('[data-petition-success]');
   const successBackdrop = petitionSuccessPopup.querySelector('.popup__backdrop');
@@ -62,13 +61,25 @@ function popup() {
     });
   });
 
-  // Close Petition popup
-  petitionPopupClose.addEventListener('click', () => {
-    petitionPopup.classList.remove('active');
+  // Close popups
+  // close petition popup
+  petitionPopup.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popup__close')) {
+      petitionPopup.classList.remove('active');
+    }
   });
 
   petitionBackdrop.addEventListener('click', () => {
     petitionPopup.classList.remove('active');
+  });
+
+  // close success message popup
+  petitionSuccessPopup.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popup__close')) {
+      petitionSuccessPopup.classList.remove('active');
+      removeSuccessAnimation(petitionSuccessPopup);
+      popupCtas.classList.remove('shown');
+    }
   });
 
   successBackdrop.addEventListener('click', () => {
@@ -78,21 +89,29 @@ function popup() {
     popupCtas.classList.remove('shown');
   });
 
-  // Show success
+  // Show success message popup
   petitionForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    petitionPopup.classList.remove('active');
     petitionSuccessPopup.classList.add('active');
 
     const successAnimation = createSuccessImage();
 
     petitionSuccessPopup.querySelector('.popup-success').appendChild(successAnimation);
 
-    setTimeout(() => {
-      removeSuccessAnimation(petitionSuccessPopup);
-      popupCtas.classList.add('shown');
-    }, 5300);
+    clearTimeout(removeAnimation);
+    runRemoveAnimation(petitionSuccessPopup, popupCtas);
   });
 }
+
+let removeAnimation;
+
+const runRemoveAnimation = (popup, ctas) => {
+  removeAnimation = window.setTimeout(() => {
+    removeSuccessAnimation(popup);
+    ctas.classList.add('shown');
+  }, 4500);
+};
 
 function createSuccessImage() {
   const successAnimation = document.createElement('div');
