@@ -103,6 +103,7 @@
   &__ctas {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 16px;
 
@@ -119,5 +120,34 @@
     button {
       width: 194px;
     }
+  }
+}
+
+.popup-success {
+  display: grid;
+
+  .animation {
+    display: grid;
+    place-content: center;
+    img {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  .popup__ctas {
+    opacity: 0;
+    // transition: opacity 200ms ease-in 100ms;
+    height: 160px;
+
+    &.shown {
+      opacity: 1;
+    }
+  }
+
+  .popup__ctas,
+  .animation {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
 }

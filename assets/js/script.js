@@ -53,6 +53,8 @@ function popup() {
   const openPopupBtns = document.querySelectorAll('[data-open-popup]');
   const petitionForm = document.querySelector('.petition-form');
 
+  const popupCtas = petitionSuccessPopup.querySelector('.popup__ctas');
+
   // Open Petition popup when button is clicked
   openPopupBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -71,13 +73,43 @@ function popup() {
 
   successBackdrop.addEventListener('click', () => {
     petitionSuccessPopup.classList.remove('active');
+
+    removeSuccessAnimation(petitionSuccessPopup);
+    popupCtas.classList.remove('shown');
   });
 
   // Show success
   petitionForm.addEventListener('submit', (e) => {
     e.preventDefault();
     petitionSuccessPopup.classList.add('active');
+
+    const successAnimation = createSuccessImage();
+
+    petitionSuccessPopup.querySelector('.popup-success').appendChild(successAnimation);
+
+    setTimeout(() => {
+      removeSuccessAnimation(petitionSuccessPopup);
+      popupCtas.classList.add('shown');
+    }, 5300);
   });
+}
+
+function createSuccessImage() {
+  const successAnimation = document.createElement('div');
+  successAnimation.classList.add('animation');
+  const successAnimationImg = document.createElement('img');
+  successAnimationImg.src = './assets/images/Gif-Completed.gif';
+  successAnimation.appendChild(successAnimationImg);
+  return successAnimation;
+}
+
+function removeSuccessAnimation(parent) {
+  if (!document.querySelector('.animation')) return;
+
+  const animation = parent.querySelector('.animation');
+  const image = animation.querySelector('img');
+  image.src = '';
+  animation.remove();
 }
 
 popup();

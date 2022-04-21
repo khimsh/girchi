@@ -1657,6 +1657,7 @@ p {
 .popup__ctas {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 16px;
 }
@@ -1671,6 +1672,30 @@ p {
 .popup__ctas a,
 .popup__ctas button {
   width: 194px;
+}
+
+.popup-success {
+  display: grid;
+}
+.popup-success .animation {
+  display: grid;
+  place-content: center;
+}
+.popup-success .animation img {
+  width: 160px;
+  height: 160px;
+}
+.popup-success .popup__ctas {
+  opacity: 0;
+  height: 160px;
+}
+.popup-success .popup__ctas.shown {
+  opacity: 1;
+}
+.popup-success .popup__ctas,
+.popup-success .animation {
+  grid-row: 1/2;
+  grid-column: 1/2;
 }
 
 .petition-form {
