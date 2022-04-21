@@ -1631,6 +1631,12 @@ p {
   border-radius: 8px;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .popup__close {
+    top: 10px;
+    right: 10px;
+  }
+}
 .popup__close i {
   display: block;
   pointer-events: none;
