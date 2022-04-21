@@ -46,8 +46,8 @@
   &__content {
     position: relative;
     width: 95vw;
-    max-width: var(--popup-max-w);
-    background-color: var(--popup-bg);
+    max-width: var(--popup-max-w, 695px);
+    background-color: var(--popup-bg, #f8f8f8);
     border-radius: var(--pupup-border-radius, 6px);
     padding-block: 24px 38px;
     padding-inline: var(--popup-padding-inline, 20px);
