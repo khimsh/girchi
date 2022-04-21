@@ -92,13 +92,24 @@ function popup() {
   // Show success message popup
   petitionForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    // get form data
+    const name = petitionForm.name.value;
+    const lastname = petitionForm.lastname.value;
+    const phone = petitionForm.tel.value;
+    const privateID = petitionForm.privateID.value;
+    const email = petitionForm.email.value;
+
+    // for testing
+    console.log(name, lastname, phone, privateID, email);
+
+    // reset form after submit
+    petitionForm.reset();
+
+    // close stuff
     petitionPopup.classList.remove('active');
     petitionSuccessPopup.classList.add('active');
-
     const successAnimation = createSuccessImage();
-
     petitionSuccessPopup.querySelector('.popup-success').appendChild(successAnimation);
-
     clearTimeout(removeAnimation);
     runRemoveAnimation(petitionSuccessPopup, popupCtas);
   });
