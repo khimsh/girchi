@@ -57,7 +57,6 @@ function popup() {
   openPopupBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       petitionPopup.classList.add('active');
-      console.log('clicked');
     });
   });
 

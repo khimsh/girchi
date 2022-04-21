@@ -1585,6 +1585,11 @@ p {
   max-width: 695px;
   padding-inline: 74px;
 }
+@media (max-width: 780px) {
+  .popup[data-petition] .popup__content {
+    padding-inline: 20px;
+  }
+}
 .popup[data-petition-success] .popup__content {
   background-color: hsl(var(--clr-neutral-100));
   max-width: 505px;
@@ -1671,10 +1676,21 @@ p {
   column-gap: 30px;
   row-gap: 34px;
 }
+@media (max-width: 780px) {
+  .petition-form {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}
 .petition-form button {
   grid-column: span 2;
   justify-self: center;
   width: 320px;
+}
+@media (max-width: 780px) {
+  .petition-form button {
+    grid-column: span 1;
+  }
 }
 
 .hero {
