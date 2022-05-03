@@ -6,6 +6,7 @@
 @use 'base/base';
 
 @use 'components/header';
+@use 'components/article';
 @use 'components/project';
 @use 'components/section';
 @use 'components/analytics-card';
@@ -19,6 +20,7 @@
 @use 'components/buttons';
 @use 'components/popup';
 @use 'components/form';
+@use 'components/slider';
 
 @use 'layouts/hero';
 @use 'layouts/news';

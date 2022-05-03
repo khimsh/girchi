@@ -4,6 +4,7 @@
 
   display: none;
   place-content: center;
+  z-index: 10000000000;
 
   &.active {
     display: grid;

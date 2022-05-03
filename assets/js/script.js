@@ -51,8 +51,16 @@ function popup() {
   const successBackdrop = petitionSuccessPopup.querySelector('.popup__backdrop');
   const openPopupBtns = document.querySelectorAll('[data-open-popup]');
   const petitionForm = document.querySelector('.petition-form');
-
   const popupCtas = petitionSuccessPopup.querySelector('.popup__ctas');
+  const petitionCards = document.querySelectorAll('.project-inner-card');
+
+  petitionCards.forEach((card) => {
+    card.addEventListener('click', (e) => {
+      if (e.target.classList.contains('btn--block')) {
+        petitionPopup.classList.add('active');
+      }
+    });
+  });
 
   // Open Petition popup when button is clicked
   openPopupBtns.forEach((btn) => {
@@ -145,3 +153,7 @@ function removeSuccessAnimation(parent) {
 popup();
 toggleNavigation();
 dropdown();
+
+document.querySelector('.projects-slider').addEventListener('click', (e) => {
+  console.log(e.target);
+});
