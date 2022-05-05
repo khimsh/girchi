@@ -1,3 +1,18 @@
+// initialize filter
+filter();
+
+// submit petition
+submitPetition();
+
+// initialize popups
+popup();
+
+// initialize navigation toggle
+toggleNavigation();
+
+// initialize dropdowns
+dropdown();
+
 // Dropdown
 function dropdown() {
   if (!document.querySelector('[data-dropdown]')) return;
@@ -22,6 +37,7 @@ function openDropdown(dropdown) {
   icon.classList.add('fa-angle-up');
   icon.classList.remove('fa-angle-down');
 }
+
 function closeDropdown(dropdown) {
   const icon = dropdown.querySelector('.fa-solid');
   dropdown.classList.remove('active');
@@ -111,13 +127,14 @@ function submitPetition() {
 function showPetitionSuccess() {
   const petitionSuccessPopup = document.querySelector('[data-petition-success]');
   const popupCtas = petitionSuccessPopup.querySelector('.popup__ctas');
+  const animationContainer = petitionSuccessPopup.querySelector('.petition__success__container');
 
   document.querySelector('[data-petition-form]').style.display = 'none';
   document.querySelector('[data-petition-success]').classList.add('active');
 
   // create & append success animation
   const successAnimation = createSuccessImage();
-  petitionSuccessPopup.querySelector('.popup-success').appendChild(successAnimation);
+  animationContainer.appendChild(successAnimation);
 
   // make sure animation restarts on every submit
   clearTimeout(removeAnimation);
@@ -190,9 +207,3 @@ function filter() {
     }
   });
 }
-
-filter();
-submitPetition();
-popup();
-toggleNavigation();
-dropdown();
