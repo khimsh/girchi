@@ -29,3 +29,18 @@
     grid-template-columns: 1fr;
   }
 }
+
+.news-details {
+  &__petition {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid hsla(224, 21%, 25%, 0.1);
+
+    // hide initially
+    display: none;
+
+    &.shown {
+      display: block;
+    }
+  }
+}

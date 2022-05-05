@@ -108,6 +108,27 @@
     margin-bottom: 24px;
     display: flex;
     align-items: center;
+
+    & > * {
+      height: 21px;
+      font-size: 14px;
+
+      &:not(:last-child) {
+        position: relative;
+        margin-right: 8px;
+        padding-right: 8px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: -1px;
+          width: 1px;
+          height: 23px;
+          background-color: hsla(224, 21%, 25%, 0.3);
+        }
+      }
+    }
   }
 
   &__title {
@@ -233,6 +254,21 @@
     text-align: right;
     span {
       font-weight: 500;
+    }
+  }
+
+  &__tags {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    a {
+      font-size: 14.5px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: #0a2fb9;
+      text-decoration: none;
     }
   }
 }
