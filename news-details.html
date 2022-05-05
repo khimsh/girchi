@@ -469,14 +469,16 @@
                 <div>
                   <h2 class="comments__title">კომენტარები</h2>
 
-                  <div class="comments__filter">
-                    <button>
-                      <span>ყველაზე ძველი</span>
+                  <!-- filter comments -->
+                  <div class="comments__filter filter">
+                    <button class="filter__btn">
+                      <span class="filter__active" data-value="oldest">ყველაზე ძველი</span>
+                      <i class="fa-solid fa-angle-down"></i>
                     </button>
 
-                    <ul>
-                      <li>ყველაზე ახალი</li>
-                      <li>ყველაზე ძველი</li>
+                    <ul class="filter__options">
+                      <li class="filter__option" data-value="newest">ყველაზე ახალი</li>
+                      <li class="filter__option" data-value="oldest">ყველაზე ძველი</li>
                     </ul>
                   </div>
 

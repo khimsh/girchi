@@ -158,6 +158,40 @@ function removeSuccessAnimation(parent) {
   animation.remove();
 }
 
+function filter() {
+  if (!document.querySelector('.filter')) return;
+
+  const filters = document.querySelectorAll('.filter');
+
+  filters.forEach((filter) => {
+    const filterBtn = filter.querySelector('.filter__btn');
+    const filterActive = filter.querySelector('.filter__active');
+    const filterOptions = filter.querySelectorAll('.filter__option');
+
+    filterBtn.addEventListener('click', () => {
+      // open filter
+      filter.classList.toggle('open');
+    });
+
+    // choose option
+    filterOptions.forEach((option) => {
+      option.addEventListener('click', () => {
+        filterActive.textContent = option.textContent;
+        filterActive.dataset.value = option.dataset.value;
+
+        filter.classList.remove('open');
+      });
+    });
+  });
+
+  window.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('filter__btn') && !e.target.classList.contains('filter__options')) {
+      document.querySelector('.filter').classList.remove('open');
+    }
+  });
+}
+
+filter();
 submitPetition();
 popup();
 toggleNavigation();
