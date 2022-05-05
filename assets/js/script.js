@@ -50,7 +50,6 @@ function popup() {
   const petitionSuccessPopup = document.querySelector('[data-petition-success]');
   const successBackdrop = petitionSuccessPopup.querySelector('.popup__backdrop');
   const openPopupBtns = document.querySelectorAll('[data-open-popup]');
-  const petitionForm = document.querySelector('.petition-form');
   const popupCtas = petitionSuccessPopup.querySelector('.popup__ctas');
   const petitionCards = document.querySelectorAll('.project-inner-card');
 
@@ -96,6 +95,11 @@ function popup() {
     removeSuccessAnimation(petitionSuccessPopup);
     popupCtas.classList.remove('shown');
   });
+}
+
+function submitPetition() {
+  if (!document.querySelector('.petition-form')) return;
+  const petitionForm = document.querySelector('.petition-form');
 
   // Show success message popup
   petitionForm.addEventListener('submit', (e) => {
@@ -113,18 +117,26 @@ function popup() {
     // reset form after submit
     petitionForm.reset();
 
-    // close stuff
-    petitionPopup.classList.remove('active');
-    petitionSuccessPopup.classList.add('active');
-    const successAnimation = createSuccessImage();
-    petitionSuccessPopup.querySelector('.popup-success').appendChild(successAnimation);
-    clearTimeout(removeAnimation);
-    runRemoveAnimation(petitionSuccessPopup, popupCtas);
+    // Show success message
+    showPetitionSuccess();
   });
 }
 
-let removeAnimation;
+function showPetitionSuccess() {
+  const petitionPopup = document.querySelector('[data-petition]');
+  const petitionSuccessPopup = document.querySelector('[data-petition-success]');
+  const popupCtas = petitionSuccessPopup.querySelector('.popup__ctas');
 
+  // close stuff
+  petitionPopup.classList.remove('active');
+  petitionSuccessPopup.classList.add('active');
+  const successAnimation = createSuccessImage();
+  petitionSuccessPopup.querySelector('.popup-success').appendChild(successAnimation);
+  clearTimeout(removeAnimation);
+  runRemoveAnimation(petitionSuccessPopup, popupCtas);
+}
+
+let removeAnimation;
 const runRemoveAnimation = (popup, ctas) => {
   removeAnimation = window.setTimeout(() => {
     removeSuccessAnimation(popup);
@@ -150,10 +162,7 @@ function removeSuccessAnimation(parent) {
   animation.remove();
 }
 
+submitPetition();
 popup();
 toggleNavigation();
 dropdown();
-
-document.querySelector('.projects-slider').addEventListener('click', (e) => {
-  console.log(e.target);
-});

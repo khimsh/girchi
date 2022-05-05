@@ -1,0 +1,22 @@
+.petition {
+  font-family: var(--ff-main);
+
+  &__wrapper {
+    max-width: 543px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &__heading {
+    margin-bottom: 33px;
+
+    h2,
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      font-feature-settings: 'case' on;
+      color: #32394d;
+      text-align: center;
+    }
+  }
+}

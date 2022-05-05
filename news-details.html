@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>გირჩი</title>
+
+    <meta name="description" content="გირჩის საიტი" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- JS -->
+    <script src="assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container header__container">
+        <!-- header top -->
+        <div class="header__top">
+          <h1 class="header__logo">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="" />
+
+              <span>გირჩი</span>
+            </a>
+          </h1>
+
+          <button class="open-nav" aria-label="open navigation menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div class="header__ctas">
+            <a class="header__cta header__cta--brand" href="#">შესვლა</a>
+            <a class="header__cta header__cta--accent" href="#">რეგისტრაცია</a>
+          </div>
+        </div>
+
+        <!-- header bottom -->
+        <div class="header__bottom">
+          <nav class="header__nav nav">
+            <h2 class="sr-only">ნავიგაცია</h2>
+            <!-- 
+            <button class="close-nav">
+              <i class="fa-solid fa-xmark"></i>
+            </button> -->
+
+            <div class="header__ctas mobile-only">
+              <a class="header__cta header__cta--brand" href="#">შესვლა</a>
+              <a class="header__cta header__cta--accent" href="#">რეგისტრაცია</a>
+            </div>
+
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">ანალიტიკა</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">სიახლეები</a>
+              </li>
+
+              <li class="nav__item dropdown" data-dropdown>
+                <button class="nav__btn">
+                  <span>ეთერები</span>
+                  <i class="fa-solid fa-angle-down"></i>
+                </button>
+
+                <ul class="nav__dropdown dropdown-nav" data-dropdown-content>
+                  <li class="dropdown-nav__item">
+                    <a class="dropdown-nav__link" href="#">ლინკი</a>
+                  </li>
+                  <li class="dropdown-nav__item">
+                    <a class="dropdown-nav__link" href="#">ლინკი</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item dropdown" data-dropdown>
+                <button class="nav__btn">
+                  <span>თარგმანები</span>
+                  <i class="fa-solid fa-angle-down"></i>
+                </button>
+
+                <ul class="nav__dropdown dropdown-nav" data-dropdown-content>
+                  <li class="dropdown-nav__item">
+                    <a class="dropdown-nav__link" href="#">ლინკი</a>
+                  </li>
+                  <li class="dropdown-nav__item">
+                    <a class="dropdown-nav__link" href="#">ლინკი</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="projects.html">პროექტები</a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="#">გაზეთი</a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__btn-block" href="#">დაგვაფინანსე</a>
+              </li>
+            </ul>
+          </nav>
+
+          <form action="#" class="header__search search">
+            <input class="search__input" type="search" name="search" id="search" placeholder="ძებნა..." />
+            <button class="search__btn" type="submit" aria-label="search">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 19.668c4.418 0 8-3.673 8-8.205s-3.582-8.205-8-8.205-8 3.673-8 8.205 3.582 8.205 8 8.205ZM21 21.72l-4.35-4.462"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="section" style="background-color: #fff">
+        <div class="section__heading">
+          <h2 class="section__title">
+            <img src="assets/images/news-heading.svg" alt="" />
+            <span>სიახლეები</span>
+          </h2>
+        </div>
+
+        <div class="news__wrapper">
+          <aside>
+            <nav class="aside-nav">
+              <ul>
+                <li class="aside-nav__item">
+                  <a href="#">ჩვენს შესახებ</a>
+                </li>
+
+                <li class="aside-nav__dropdown">
+                  <div class="aside-nav__item">
+                    <a href="#">თარგმანები</a>
+                    <button>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <ul>
+                    <li>
+                      <a href="#">ლინკი</a>
+                    </li>
+                    <li>
+                      <a href="#">ლინკი</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="aside-nav__item">
+                  <a href="#">სიახლეები</a>
+                </li>
+
+                <li class="aside-nav__dropdown active">
+                  <div class="aside-nav__item">
+                    <a href="#">ეთერები</a>
+                    <button>
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <ul>
+                    <li>
+                      <a href="#">ლინკი</a>
+                    </li>
+                    <li>
+                      <a href="#">ლინკი</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="aside-nav__item">
+                  <a href="#">ტკივილი</a>
+                </li>
+
+                <li class="aside-nav__item">
+                  <a href="#">პროექტები</a>
+                </li>
+
+                <li class="aside-nav__item">
+                  <a href="#">ციტატები</a>
+                </li>
+
+                <li class="aside-nav__item">
+                  <a href="#">ბლოგი</a>
+                </li>
+
+                <li class="aside-nav__item">
+                  <a href="#">გირჩი</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div>
+              <h2>ტეგები</h2>
+
+              <ul class="tags">
+                <li>
+                  <a href="#" class="tag"># პროცესი</a>
+                </li>
+                <li>
+                  <a href="#" class="tag"># თავისუფალი ბაზარი</a>
+                </li>
+                <li>
+                  <a href="#" class="tag"># გირჩის სკოლა</a>
+                </li>
+                <li>
+                  <a href="#" class="tag"># თარგმანები</a>
+                </li>
+                <li>
+                  <a href="#" class="tag"># გირჩის ბლოგი</a>
+                </li>
+                <li>
+                  <a href="#" class="tag"># მეტი თავისუფლება</a>
+                </li>
+                <li>
+                  <a href="#" class="tag"># პირადი ცხოვრება</a>
+                </li>
+                <li>
+                  <a href="#" class="tag"># გამოხატვის თავისუფლება</a>
+                </li>
+                <li>
+                  <a href="#" class="tag"># საკონსტიტუციო სამართალი</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <main>
+            <article class="news-item">
+              <figure class="news-item__main-image">
+                <img
+                  src="https://images.pexels.com/photos/3810753/pexels-photo-3810753.jpeg?cs=srgb&dl=pexels-rfstudio-3810753.jpg&fm=jpg"
+                  alt=""
+                />
+              </figure>
+
+              <header class="news-item__header">
+                <div class="news-item__meta">
+                  <div class="news-card__meta">
+                    <i class="fa-regular fa-clock"></i>
+                    <time>2 მარტი 2022</time>
+                  </div>
+
+                  <div>315 views</div>
+
+                  <div>ბლოგი</div>
+
+                  <div>მეტი თავისუფლება</div>
+                </div>
+                <h1 class="news-item__title">გირჩი პარლამენტში შედის</h1>
+              </header>
+
+              <div class="news-item__body">
+                <p>
+                  ქუთაისში დროშის აღმართვა ხუთჯერ სცადეს უშედეგოდ. მეექვსე ცდაზე დაკიდეს, რაც გადასახადის გადამხდელებს 50000 ლარი დაგვიჯდა.
+                  დღეს კი ეს 50000 ლარიანი დროშა ქარმა წაიღო. ზუსტად ასევე "ეფექტურად" ზრუნავს მთავრობა ნებისმიერ რამეზე.
+                </p>
+                <p>
+                  ამის მიზეზი მარტივია: ხარჯვა ყველაზე ეფექტურია, როდესაც საკუთარ ფულს, საკუთარი მიზნებისთვის ხარჯავ, ნაკლებად ეფექტურია,
+                  როცა საკუთარ ფულს, სხვისი საჭიროებისთვის ხარჯავ და ყველაზე არაეფექტურია, როდესაც სხვის ფულს, სხვის საჭიროებებზე ხარჯავ.
+                </p>
+                <p>
+                  ვისაც ჰგონია, რომ გერმანული, სკანდინავიური ან ნებისმიერი სხვა ქვეყნის ბიუროკრატია, უფრო ეფექტურია, ცდება. ამ მცდარ
+                  წარმოდგენას ქმნის ის ფაქტი, რომ ის ქვეყნები, სადაც ბიუროკრატია უფრო ეფექტური გვეჩვენება, 10-ჯერ და 15-ჯერ უფრო მდიდრები
+                  არიან, <u>ვიდრე ჩვენ ვართ და იქ ამ არაეფექტურობის</u> მაჩვენებელი, ნაკლებად დამანგრეველი ჩანს. არსებითად, ნებისმიერ რამეს,
+                  რასაც ბიუროკრატია აკეთებს, ორჯერ უფრო იაფად და ხარისხიანად გააკეთებს კერძო კომპანია, თუკი მას თავად გადამხდელი დაუკვეთავს.
+                </p>
+                <p>
+                  ზუსტად ამიტომაა მნიშვნელოვანი ბიუროკრატიის ზომა მაქსიმალურად შევამციროთ და რაც შეიძლება ნაკლები მივცეთ დასახარჯად და რაც
+                  შეიძლება ნაკლები სივრცე დავუტოვოთ სამოქმედოდ.
+                </p>
+                <p>
+                  ყოველივე ზემოთქმულიდან გამომდინარე, <a href="#">გონივრულია არჩევნებზე ხმა მისცეთ</a> ისეთ პარტიებს, რომლებიც
+                  გადასახადებისა და ბიუროკრატიის შემცირებას გპირდებიან და ამბობენ, რომ თქვენი გადასაწყვეტი იქნება საერთოდ დახარჯავთ თუ არა
+                  ფულს დროშის აღმართვაში, თუ ამჯობინებთ ამ ფულით ერთით მეტი გზა გააკეთოთ, ან სხვა პრობლემა მოაგვაროთ და თავადვე აკონტროლოთ
+                  ფასის და ხარისხის შესაბამისობა, ხოლო არაგონივრულია დაუჯეროთ პარტიებს, რომლებიც გპირდებიან, რომ დროშას ისინი უფრო იაფად
+                  აღმართავენ და იმ დროშას ქარი არ წაიღებს.
+                </p>
+                <p>
+                  გონივრულია დაუჯეროთ პარტიებს, რომლებიც გეუბნებიან, რომ თქვენი გადასაწყვეტი იქნება, თქვენი ქალაქი ღვინის დედაქალაქი იქნება
+                  თუ ფესტივალების, საგანმანათლებლო ცენტრი იქნება თუ ინდუსტრიული, ხოლო არაგონივრულია დაუჯეროთ ხალხს, რომლებსაც ერთი დღე არ
+                  უცხოვრია თქვენ გვერდით, სამაგიეროდ თბილისში საკუთარ კაბინეტში, კაცმა არ იცის ვისი რჩევით გადაგიწყვიტათ რა იქნება თქვენთვის
+                  უკეთესი.
+                </p>
+                <figure class="news-item__image-w-quote">
+                  <img src="https://images.pexels.com/photos/8872205/pexels-photo-8872205.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
+                  <figcaption>
+                    <p>
+                      “ გონივრულია დაუჯეროთ პარტიებს, რომლებიც გეუბნებიან, რომ თქვენი გადასაწყვეტი იქნება, თქვენი ქალაქი ღვინის დედაქალაქი
+                      იქნება თუ ფესტივალების, საგანმანათლებლო ცენტრი იქნება თუ ინდუსტრიული, ხოლო არაგონივრულია დაუჯეროთ ხალხს, რომლებსაც
+                      ერთი დღე არ უცხოვრია თქვენ გვერდით, სამაგიეროდ თბილისში საკუთარ კაბინეტში, კაცმა არ იცის ვისი რჩევით გადაგიწყვიტათ რა
+                      იქნება თქვენთვის უკეთესი.”
+                    </p>
+                  </figcaption>
+                </figure>
+                <p>
+                  და ა.შ. და ა.შ. მოკლედ, პოლიტიკოსების საქმე არაა მზრუნველობა, ეს მათ მხოლოდ ჩვენ ხარჯზე გამდიდრების საშუალებას აძლევს და
+                  კიდევ უფრო გვაღარიბებს. დაე, პოლიტიკოსებმა მიხედონ ეროვნულ უსაფრთხოებას, მსხვილ ინფრასტრუქტურულ გლობალური მნიშვნელობის
+                  გადაწყვეტილებებს, უზრუნველყონ სამართლიანი სასამართლო და მართლმსაჯულების სისტემა და მეტი დრო დახარჯონ საინვესტიციო გარემოს
+                  გაუმჯობესებასა და ქვეყნის დეოკუპაციაზე, ჩვენ კი მოგვცენ საშუალება თავად გადავწყვიტოთ ჩვენ ფულს დროშის დაკიდებაში
+                  დავხარჯავთ, ფესტივალის მოწყობაში, გზის გაყვანაში, სარწყავი სისტემის რეაბილიტაციაში თუ სპორტული ინფრასტრუქტურის მოწყობაში
+                  საკუთარი შვილებისთვის.
+                </p>
+                <p>
+                  მოკლედ პოლიტიკოსები უნდა ვაიძულოთ აკეთონ თავიანთი საქმე და ჩვენ ძარცვას შეეშვან. მით უმეტეს ამ ძარცვას არ დაარქვან ზრუნვა.
+                  ყელამდე ვართ ამ დედამო**ნულების ზრუნვით ჯერ კიდევ საბჭოთა კავშირიდან მოყოლებული.
+                </p>
+                <div class="news-item__gallery">
+                  <figure>
+                    <img src="https://images.pexels.com/photos/5940836/pexels-photo-5940836.jpeg" alt="" />
+                    <figcaption>
+                      <p>სურათი N1</p>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="https://bposeats.com/info/wp-content/uploads/2021/02/pexels-daria-shevtsova-1560932-scaled.jpg" alt="" />
+                    <figcaption>
+                      <p>სურათი N2</p>
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="https://images.pexels.com/photos/3153208/pexels-photo-3153208.jpeg?cs=srgb&dl=pexels-canva-studio-3153208.jpg&fm=jpg"
+                      alt=""
+                    />
+                    <figcaption>
+                      <p>სურათი N3</p>
+                    </figcaption>
+                  </figure>
+                </div>
+                <p>
+                  და ბოლოს, ვიცი ფიქრობთ აბა იმათზე ვინ იზრუნებს, ვისაც ყველაზე მეტად უჭირსო. სინამდვილეში თუ გინდათ გაიგოთ ამ ნაწილში
+                  რამდენად ეფექტურია ბიუროკრატია, გეტყვით, რომ სხვადასხვა ტიპის სოციალური პროექტებიდან, რომლებსაც მთავრობა
+                  გაჭირვებულებისთვის უნდა აფინანსებდეს, ყველაზე დიდი ნაწილი მაღალი და საშუალო შემოსავლების მქონე ოჯახებში მიდის და ამ
+                  ბიუჯეტის მხოლოდ 10% ხმარდება ღარიბებს და კიდევ 10% სიღარიბის ზღვარს ქვემოთ მყოფებს. დასკვნა თქვენ თვითონ გამოიტანეთ.
+                  მთავრობა თქვენს მიერ გამომუშავებული 100 ლარიდან ჯამში 35 ლარს გართმევთ, პირდაპირი და არაპირდაპირი გადასახადების სახით. ამ
+                  თანხის მხოლოდ უმცირეს ნაწილს ხარჯავს ის ყველაზე გაჭირვებულების დასახმარებლად. დანარჩენს კი ან თავად მოიხმარს, ან ორჯერ და
+                  მეტად არაეფექტურად ხარჯავს და შედეგად თქვენზე ყიდის ძვირ და უხარისხო სერვისებს, რომლებსაც გაწვდიან გათავხედებული საჯარო
+                  მოხელეები, რომლებსაც თავი თქვენი უფროსები ჰგონიათ. სინამდვილეში მზრუნველი მთავრობა თქვენი სიღატაკისა და მონობის ბორკილებს
+                  თქვენგანვე წართმეული ფულით ჭედავს.
+                </p>
+                <div class="news-item__video">
+                  <iframe
+                    src="https://www.youtube.com/embed/BCvoTL0EPoc"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <p>
+                  და ბოლოს, ვიცი ფიქრობთ აბა იმათზე ვინ იზრუნებს, ვისაც ყველაზე მეტად უჭირსო. სინამდვილეში თუ გინდათ გაიგოთ ამ ნაწილში
+                  რამდენად ეფექტურია ბიუროკრატია, გეტყვით, რომ სხვადასხვა ტიპის სოციალური პროექტებიდან, რომლებსაც მთავრობა
+                  გაჭირვებულებისთვის უნდა აფინანსებდეს, ყველაზე დიდი ნაწილი მაღალი და საშუალო შემოსავლების მქონე ოჯახებში მიდის და ამ
+                  ბიუჯეტის მხოლოდ 10% ხმარდება ღარიბებს და კიდევ 10% სიღარიბის ზღვარს ქვემოთ მყოფებს. დასკვნა თქვენ თვითონ გამოიტანეთ.
+                  მთავრობა თქვენს მიერ გამომუშავებული 100 ლარიდან ჯამში 35 ლარს გართმევთ, პირდაპირი და არაპირდაპირი გადასახადების სახით. ამ
+                  თანხის მხოლოდ უმცირეს ნაწილს ხარჯავს ის ყველაზე გაჭირვებულების დასახმარებლად. დანარჩენს კი ან თავად მოიხმარს, ან ორჯერ და
+                  მეტად არაეფექტურად ხარჯავს და შედეგად თქვენზე ყიდის ძვირ და უხარისხო სერვისებს, რომლებსაც გაწვდიან გათავხედებული საჯარო
+                  მოხელეები, რომლებსაც თავი თქვენი უფროსები ჰგონიათ. სინამდვილეში მზრუნველი მთავრობა თქვენი სიღატაკისა და მონობის ბორკილებს
+                  თქვენგანვე წართმეული ფულით ჭედავს.
+                </p>
+                <blockquote>
+                  <p>
+                    “ გონივრულია დაუჯეროთ პარტიებს, რომლებიც გეუბნებიან, რომ თქვენი გადასაწყვეტი იქნება, თქვენი ქალაქი ღვინის დედაქალაქი
+                    იქნება თუ ფესტივალების, საგანმანათლებლო ცენტრი იქნება თუ ინდუსტრიული, ხოლო არაგონივრულია დაუჯეროთ ხალხს, რომლებსაც ერთი
+                    დღე არ უცხოვრია თქვენ გვერდით, სამაგიეროდ თბილისში საკუთარ კაბინეტში, კაცმა არ იცის ვისი რჩევით გადაგიწყვიტათ რა იქნება
+                    თქვენთვის უკეთესი.”
+                  </p>
+                </blockquote>
+                <p>
+                  ამ ქვეყანაში სიღარიბე არასოდეს დაიძლევა, სანამ მზრუნველი მთავრობა გვეყოლება. ამიტომ უბრალოდ ერთი მზრუნველი მთავრობა
+                  მეორეთი კი არ უნდა შევცვალოთ, არამედ საერთოდ აღარ უნდა ავირჩიოთ ხალხი, რომელიც ჩვენ მოტყუებას ცდილობს და გაძარცვას
+                  გვპირდება, ოღონდ სიტყვა ძარცვის ნაცვლად, ზრუნვას იყენებს.
+                </p>
+
+                <p class="news-item__author">ავტორი: <span>ტორესა მოსი</span></p>
+              </div>
+
+              <div class="news-item__tags flex" style="--clr: #0a2fb9; --gap: 12px">
+                <a href="#">#ბლოგი</a>
+                <a href="#">#ტორესა მოსი</a>
+                <a href="#">#ბიუროკრატია</a>
+                <a href="#">#2020 არჩევნები</a>
+              </div>
+            </article>
+
+            <div class="petition">
+              <div class="petition__wrapper" data-petition-form>
+                <header class="petition__heading">
+                  <h2>პეტიიციის ფორმა</h2>
+                </header>
+
+                <form action="#" class="petition-form">
+                  <div class="form-input">
+                    <label for="name">სახელი</label>
+                    <input type="text" name="name" id="name" required />
+                  </div>
+
+                  <div class="form-input">
+                    <label for="lastname">გვარი</label>
+                    <input type="text" name="lastname" id="lastname" required />
+                  </div>
+
+                  <div class="form-input">
+                    <label for="privateID">პირადი ნომერი</label>
+                    <input type="text" name="privateID" id="privateID" required />
+                  </div>
+
+                  <div class="form-input">
+                    <label for="tel">ტელეფონის ნომერი</label>
+                    <input type="tel" name="tel" id="tel" required />
+                  </div>
+
+                  <div class="form-input">
+                    <label for="email">ელ-ფოსტა</label>
+                    <input type="email" name="email" id="email" required />
+                  </div>
+
+                  <div>
+                    <p>გსურს მიიღო შეტყობინება სიახლეებზე?</p>
+                    <div class="form-checkbox">
+                      <label for="subscribe">გამოიწერე სიახლეები</label>
+                      <input type="checkbox" name="subscribe" id="subscribe" />
+                    </div>
+                  </div>
+
+                  <button class="btn btn--block" type="submit">ხელისმოწერა</button>
+                </form>
+              </div>
+
+              <div class="petition__success" data-petition-success>
+                <header class="popup__heading">
+                  <h2>ხელმოწერა მიღებულია</h2>
+                  <p>
+                    მადლობა პროექტის მხარდაჭერისთვის. ახლა შეგიძლია სხვა პროექტებსაც გაეცნო, ან შენს მიერ ხელმოწერილი პროექტი დაააფინანსო.
+                  </p>
+                </header>
+
+                <div class="popup-success">
+                  <div class="popup__ctas">
+                    <a href="projects.html" class="btn btn--outline">პროექტები</a>
+                    <span>ან</span>
+                    <a href="projects.html" class="btn btn--blue">დაგვაფინანსე</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comments">
+              <header class="comments__header">
+                <div>
+                  <h2 class="comments__title">კომენტარები</h2>
+
+                  <div class="comments__filter">
+                    <button>
+                      <span>ყველაზე ძველი</span>
+                    </button>
+
+                    <ul>
+                      <li>ყველაზე ახალი</li>
+                      <li>ყველაზე ძველი</li>
+                    </ul>
+                  </div>
+
+                  <div class="comments__count">0 კომენტარი</div>
+                </div>
+
+                <ul class="comments__share">
+                  <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Feed</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Tweet</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Viber</a>
+                  </li>
+                </ul>
+              </header>
+
+              <div class="comments__leave-comment">
+                <figure class="comments__user-avatar">
+                  <img
+                    src="https://images.pexels.com/photos/11293709/pexels-photo-11293709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""
+                  />
+                </figure>
+
+                <form action="#" class="comments__form">
+                  <textarea name="comment" id="comment" placeholder="დაამატეთ კომენტარი..."></textarea>
+                </form>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <img src="assets/images/logo.png" alt="" />
+
+          <span>გირჩი</span>
+        </div>
+
+        <ul class="footer__contact contact-footer">
+          <li class="contact-footer__item">
+            <a class="contact-footer__link contact-footer__link--mail" href="#" target="_blank" rel="noopener noreferrer" aria-label="mail">
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M30.288 6H7.632C6.732 6 6 6.733 6 7.632v13.029c0 .9.732 1.632 1.632 1.632h22.656c.9 0 1.632-.732 1.632-1.632V7.631c0-.9-.732-1.631-1.632-1.631Zm-6.315 7.351 6.976-5.833a.67.67 0 0 1 .011.115V20.62l-6.987-7.27ZM6.96 20.621V7.633c0-.04.005-.078.012-.115l6.975 5.833-6.987 7.27Zm.842-13.66H30.12l-10.834 9.06a.511.511 0 0 1-.646.002L7.802 6.96Zm-.17 14.372-.023-.002 7.076-7.363 3.34 2.793a1.48 1.48 0 0 0 1.872-.002l3.338-2.79 7.076 7.361c-.008 0-.015.003-.023.003H7.632Z"
+                />
+              </svg>
+
+              <span>Info@girchi.com</span>
+            </a>
+          </li>
+
+          <li class="contact-footer__item">
+            <a
+              class="contact-footer__link contact-footer__link--fb"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="facebook"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <circle cx="16" cy="16" r="15.25" />
+                  <path
+                    d="M20.5 8.5h-2.25a3.75 3.75 0 0 0-3.75 3.75v2.25h-2.25v3h2.25v6h3v-6h2.25l.75-3h-3v-2.25a.75.75 0 0 1 .75-.75h2.25v-3Z"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+
+          <li class="contact-footer__item">
+            <a
+              class="contact-footer__link contact-footer__link--tw"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="twitter"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <circle cx="16" cy="16" r="15.25" />
+                  <path
+                    d="M24.25 9.25a8.174 8.174 0 0 1-2.355 1.147A3.36 3.36 0 0 0 16 12.647v.75A7.994 7.994 0 0 1 9.25 10s-3 6.75 3.75 9.75a8.73 8.73 0 0 1-5.25 1.5c6.75 3.75 15 0 15-8.625 0-.21-.02-.418-.06-.623a5.79 5.79 0 0 0 1.56-2.752v0Z"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+
+          <li class="contact-footer__item">
+            <a
+              class="contact-footer__link contact-footer__link--yt"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="youtube"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <circle cx="16" cy="16" r="15.25" />
+                  <path
+                    d="M23.517 11.815a2.12 2.12 0 0 0-.499-.945 1.958 1.958 0 0 0-.88-.555C20.916 10 16.028 10 16.028 10s-4.889 0-6.11.345c-.335.1-.639.291-.88.555-.243.263-.415.59-.5.945a22.927 22.927 0 0 0-.326 3.967c-.008 1.34.101 2.679.327 3.998.093.345.269.659.51.91.242.253.54.435.868.53 1.222.345 6.11.345 6.11.345s4.89 0 6.111-.345c.335-.1.638-.291.88-.555a2.12 2.12 0 0 0 .499-.945c.222-1.3.331-2.617.326-3.938a22.924 22.924 0 0 0-.326-3.997Z"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path d="m14.429 18.264 4.086-2.452-4.086-2.453v4.905Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__bottom">
+        <nav class="footer__nav nav-footer">
+          <ul class="nav-footer__list">
+            <li class="nav-footer__item">
+              <a href="#" class="nav-footer__link">ლეგალიზაცია</a>
+            </li>
+            <li class="nav-footer__item">
+              <a href="#" class="nav-footer__link">თავისუფალი განათლება</a>
+            </li>
+            <li class="nav-footer__item">
+              <a href="#" class="nav-footer__link">ნამდვილი თავდაცვა</a>
+            </li>
+            <li class="nav-footer__item">
+              <a href="#" class="nav-footer__link">ძალაუფლება ხალხს</a>
+            </li>
+            <li class="nav-footer__item">
+              <a href="#" class="nav-footer__link">ჩვენი ხედვა</a>
+            </li>
+            <li class="nav-footer__item">
+              <a href="#" class="nav-footer__link">ჩვენი ამბავი</a>
+            </li>
+            <li class="nav-footer__item">
+              <a href="#" class="nav-footer__link">როგორი ქვეყანა გვინდა</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__copy">
+          <p>ყველა საავტორო უფლების თავზეც გავიარეთ.გირჩი</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

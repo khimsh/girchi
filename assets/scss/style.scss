@@ -11,9 +11,11 @@
 @use 'components/section';
 @use 'components/analytics-card';
 @use 'components/news-card';
+@use 'components/petition';
 @use 'components/ratings';
 @use 'components/footer';
 @use 'components/charts';
+@use 'components/comments';
 @use 'components/dropdown';
 @use 'components/coin';
 @use 'components/inputs';
@@ -21,6 +23,7 @@
 @use 'components/popup';
 @use 'components/form';
 @use 'components/slider';
+@use 'components/tags';
 
 @use 'layouts/hero';
 @use 'layouts/news';
