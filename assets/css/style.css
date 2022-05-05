@@ -1409,11 +1409,14 @@ p {
 
 .petition {
   font-family: var(--ff-main);
-}
-.petition__wrapper {
   max-width: 543px;
-  width: 100%;
   margin-inline: auto;
+  width: 100%;
+}
+.petition--border-top {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid hsla(224deg, 21%, 25%, 0.1);
 }
 .petition__heading {
   margin-bottom: 33px;
@@ -1425,6 +1428,13 @@ p {
   font-feature-settings: "case" on;
   color: #32394d;
   text-align: center;
+}
+
+[data-petition-success] {
+  display: none;
+}
+[data-petition-success].active {
+  display: block;
 }
 
 .ratings-table {

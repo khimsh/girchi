@@ -47,11 +47,9 @@ function popup() {
 
   const petitionPopup = document.querySelector('[data-petition]');
   const petitionBackdrop = petitionPopup.querySelector('.popup__backdrop');
-  const petitionSuccessPopup = document.querySelector('[data-petition-success]');
-  const successBackdrop = petitionSuccessPopup.querySelector('.popup__backdrop');
   const openPopupBtns = document.querySelectorAll('[data-open-popup]');
-  const popupCtas = petitionSuccessPopup.querySelector('.popup__ctas');
   const petitionCards = document.querySelectorAll('.project-inner-card');
+  const popupCtas = document.querySelector('.popup__ctas');
 
   petitionCards.forEach((card) => {
     card.addEventListener('click', (e) => {
@@ -73,27 +71,15 @@ function popup() {
   petitionPopup.addEventListener('click', (e) => {
     if (e.target.classList.contains('popup__close')) {
       petitionPopup.classList.remove('active');
+      popupCtas.classList.remove('shown');
+      resetPetition();
     }
   });
 
   petitionBackdrop.addEventListener('click', () => {
     petitionPopup.classList.remove('active');
-  });
-
-  // close success message popup
-  petitionSuccessPopup.addEventListener('click', (e) => {
-    if (e.target.classList.contains('popup__close')) {
-      petitionSuccessPopup.classList.remove('active');
-      removeSuccessAnimation(petitionSuccessPopup);
-      popupCtas.classList.remove('shown');
-    }
-  });
-
-  successBackdrop.addEventListener('click', () => {
-    petitionSuccessPopup.classList.remove('active');
-
-    removeSuccessAnimation(petitionSuccessPopup);
     popupCtas.classList.remove('shown');
+    resetPetition();
   });
 }
 
@@ -123,17 +109,27 @@ function submitPetition() {
 }
 
 function showPetitionSuccess() {
-  const petitionPopup = document.querySelector('[data-petition]');
   const petitionSuccessPopup = document.querySelector('[data-petition-success]');
   const popupCtas = petitionSuccessPopup.querySelector('.popup__ctas');
 
-  // close stuff
-  petitionPopup.classList.remove('active');
-  petitionSuccessPopup.classList.add('active');
+  document.querySelector('[data-petition-form]').style.display = 'none';
+  document.querySelector('[data-petition-success]').classList.add('active');
+
+  // create & append success animation
   const successAnimation = createSuccessImage();
   petitionSuccessPopup.querySelector('.popup-success').appendChild(successAnimation);
+
+  // make sure animation restarts on every submit
   clearTimeout(removeAnimation);
   runRemoveAnimation(petitionSuccessPopup, popupCtas);
+}
+
+function resetPetition() {
+  const form = document.querySelector('[data-petition-form]');
+  const success = document.querySelector('[data-petition-success]');
+
+  form.style.display = 'block';
+  success.classList.remove('active');
 }
 
 let removeAnimation;
